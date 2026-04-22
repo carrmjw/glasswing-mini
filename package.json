@@ -1,0 +1,28 @@
+{
+  "name": "glasswing-mini",
+  "version": "0.1.0",
+  "description": "Autonomous JS/TS vulnerability-discovery agent, built on the Claude API. An open, homebrew take on the idea behind Anthropic's Project Glasswing.",
+  "type": "module",
+  "bin": {
+    "glasswing": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/cli.ts",
+    "scan": "tsx src/cli.ts",
+    "start": "node dist/cli.js"
+  },
+  "keywords": ["security", "vulnerability", "claude", "agent", "javascript", "typescript", "sast"],
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
