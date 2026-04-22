@@ -105,8 +105,8 @@ async function main() {
     console.error("see README.md for the ethics policy.");
     process.exit(2);
   }
-  if (!process.env.ANTHROPIC_API_KEY) {
-    console.error("ANTHROPIC_API_KEY is not set.");
+  if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN) {
+    console.error("ANTHROPIC_API_KEY (or ANTHROPIC_AUTH_TOKEN for OAuth bearer) is not set.");
     process.exit(3);
   }
 
