@@ -61,6 +61,8 @@ npx tsx src/cli.ts scan ./samples --focus=rce,ssrf,sqli,path,auth --i-own-this
 
 You should see the agent find RCE via `exec("ping ... ${host}")`, SSRF via unvalidated `fetch(url)`, path traversal via `join("/var/docs", name)`, SQLi via template-string query, and the header-based auth bypass.
 
+**Reference output**: [examples/sample-report.md](examples/sample-report.md) — actual report from a clean Sonnet 4.6 run. 5/5 planted bugs found in 8 agent steps / 52s / ~5¢ spend, with zero false positives on the adjacent clean code (`/user-safe`).
+
 ## Output
 
 The report is Markdown with:
